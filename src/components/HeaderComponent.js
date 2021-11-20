@@ -10,7 +10,7 @@ class Header extends Component {
             <Navbar
                 color="light"
                 expand="md"
-                fixed="top"
+                sticky="top"
                 light
             >
                 <NavbarBrand href="/">
