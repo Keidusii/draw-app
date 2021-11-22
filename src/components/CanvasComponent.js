@@ -14,7 +14,7 @@ function Canvas(props) {
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
         canvas.style.height = "480px";
-        canvas.style.width = "700px";
+        canvas.style.width = "100%";
         resizeCanvasToDisplaySize(canvas);
         resizeCanvas(canvas);
         context.strokeStyle = props.color;
@@ -22,7 +22,7 @@ function Canvas(props) {
         context.lineJoin = "round";
         context.lineWidth = props.lineWidth;
         contextRef.current = context;
-    }, [])
+    }, [props.color, props.lineWidth])
 
     const resizeCanvasToDisplaySize = canvas => {
     
@@ -77,7 +77,8 @@ function Canvas(props) {
 
     return (
         <canvas
-            id="canvas"
+            id="canvas" 
+            className="mt-2"
             onMouseDown={startDrawing}
             onTouchStart={startDrawing}
             onMouseUp={stopDrawing}

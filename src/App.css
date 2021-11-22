@@ -10,3 +10,11 @@ body {
     margin: 0 auto;
     cursor: crosshair;
 }
+
+.tools {
+    height: 45px;
+}
+
+.line-width-title {
+    color: white;
+}

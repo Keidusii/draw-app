@@ -14,47 +14,29 @@ class Header extends Component {
                 light
             >
                 <NavbarBrand href="/">
-                    reactstrap
+                    Draw
                 </NavbarBrand>
                 <NavbarToggler onClick={function noRefCheck() { }} />
                 <Collapse navbar>
                     <Nav
-                        className="me-auto"
+                        className="mx-auto"
                         navbar
                     >
                         <NavItem>
                             <NavLink href="/components/">
-                                Components
+                                Home
                             </NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="https://github.com/reactstrap/reactstrap">
-                                GitHub
+                                Draw
                             </NavLink>
                         </NavItem>
-                        <UncontrolledDropdown
-                            inNavbar
-                            nav
-                        >
-                            <DropdownToggle
-                                caret
-                                nav
-                            >
-                                Options
-                            </DropdownToggle>
-                            <DropdownMenu right>
-                                <DropdownItem>
-                                    Option 1
-                                </DropdownItem>
-                                <DropdownItem>
-                                    Option 2
-                                </DropdownItem>
-                                <DropdownItem divider />
-                                <DropdownItem>
-                                    Reset
-                                </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
+                        <NavItem>
+                            <NavLink href="https://github.com/reactstrap/reactstrap">
+                                About
+                            </NavLink>
+                        </NavItem>
                     </Nav>
                     <NavbarText>
                         Simple Text
