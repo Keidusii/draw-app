@@ -10,6 +10,7 @@ class Tools extends Component {
         super(props);
         this.state = {
             color: '#000000',
+            tempColor: '',
             lineWidth: 1,
             lineWidthToggle: false,
             showColorPicker: false
@@ -33,7 +34,10 @@ class Tools extends Component {
 
     toggleColorPicker = () => {
         this.setState({
+            color: this.state.tempColor,
             showColorPicker: !this.state.showColorPicker
+        }, () => {
+            this.handleColorChange();
         });
     }
 
@@ -47,10 +51,15 @@ class Tools extends Component {
 
     eraser = () => {
         this.setState({
-            color: "white"
+            tempColor: this.state.color
         }, () => {
-            this.handleColorChange();
+            this.setState({
+                color: "white"
+            }, () => {
+                this.handleColorChange();
+            });
         });
+        
     }
 
     download = () => {
