@@ -7,7 +7,6 @@ import About from './AboutComponent';
 
 class Main extends Component {
     render() {
-        const a = 1;
         return (
             <BrowserRouter>
             <Header />

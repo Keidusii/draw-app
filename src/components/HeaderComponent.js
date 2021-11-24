@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,
-    NavbarText
-} from 'reactstrap';
+    Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -10,35 +8,29 @@ class Header extends Component {
         return (
             <Navbar
                 color="light"
-                expand="md"
+                expand="xs"
                 sticky="top"
                 light
             >
                 <NavbarBrand href="/">
                     Draw
                 </NavbarBrand>
-                <NavbarToggler onClick={function noRefCheck() { }} />
-                <Collapse navbar>
-                    <Nav
-                        className="mx-auto"
-                        navbar
-                    >
-                        <NavItem>
-                            <NavLink className="nav-link" to="/">Home</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/studio">Studio</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/about">
-                                About
-                            </NavLink>
-                        </NavItem>
-                    </Nav>
-                    <NavbarText>
-                        Simple Text
-                    </NavbarText>
-                </Collapse>
+                <Nav
+                    className="mx-auto"
+                    navbar
+                >
+                    <NavItem>
+                        <NavLink className="nav-link" to="/">Home</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink className="nav-link" to="/studio">Studio</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink className="nav-link" to="/about">
+                            About
+                        </NavLink>
+                    </NavItem>
+                </Nav>
             </Navbar>
         );
     }

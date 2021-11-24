@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Button, ButtonGroup } from 'reactstrap';
 import { SketchPicker } from 'react-color';
 import { Slider } from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUndo, faEraser, faDownload, faPalette } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUndo, faEraser, faDownload, faPalette } from '@fortawesome/free-solid-svg-icons';
 
 class Tools extends Component {
     constructor(props) {
@@ -55,16 +55,16 @@ class Tools extends Component {
 
     download = () => {
         const link = document.createElement('a');
-        link.download = 'filename.png';
+        link.download = `${this.props.title}.png`;
         link.href = this.props.canvasRef.getDataURL("image/png", false, "white")
         link.click();
     }
 
     render() {
         return (
-            <div className="row text-center container">
+            <div className="row mx-auto container">
                 <div className="row mt-2 px-2">
-                    <h5 className="col-4 my-auto line-width-title">Line / Eraser Size</h5>
+                    <h5 className="col-12 text-center mb-0">Line / Eraser Size</h5>
                     <Slider
                         aria-label="Line Width"
                         defaultValue={1}
@@ -74,7 +74,7 @@ class Tools extends Component {
                         min={1}
                         max={15}
                         onChange={(e, value) => this.handleLineWidthChange(e, value)}
-                        className="col line-slider"
+                        className="col-12 mx-auto my-auto line-slider"
                     />
                 </div>
                 <div className="row mt-2">

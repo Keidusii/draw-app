@@ -3,6 +3,14 @@ body {
     color: white;
 }
 
+#titleContainer {
+    text-align: center;
+}
+
+#title {
+    width:250px;
+}
+
 canvas {
     cursor: crosshair;
 }
