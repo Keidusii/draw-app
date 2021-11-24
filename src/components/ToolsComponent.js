@@ -54,11 +54,10 @@ class Tools extends Component {
     }
 
     download = () => {
-        console.log(this.props.canvasRef.getDataURL());
-    //     const link = document.createElement('a');
-    //     link.download = 'filename.png';
-    //     link.href = this.props.canvasRef.getDataURL("image/png");
-    //     link.click();
+        const link = document.createElement('a');
+        link.download = 'filename.png';
+        link.href = this.props.canvasRef.getDataURL("image/png", false, "white")
+        link.click();
     }
 
     render() {
