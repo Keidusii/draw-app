@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {
-    Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, NavLink,
-    UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText
+    Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,
+    NavbarText
 } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
     render() {
@@ -23,17 +24,13 @@ class Header extends Component {
                         navbar
                     >
                         <NavItem>
-                            <NavLink href="/components/">
-                                Home
-                            </NavLink>
+                            <NavLink className="nav-link" to="/">Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">
-                                Draw
-                            </NavLink>
+                            <NavLink className="nav-link" to="/studio">Studio</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">
+                            <NavLink className="nav-link" to="/about">
                                 About
                             </NavLink>
                         </NavItem>

@@ -1,7 +1,43 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import CanvasDraw from 'react-canvas-draw';
+import Tools from './ToolsComponent';
 
 function Canvas(props) {
-    const canvasRef = useRef(null);
+    const canvasRef = useRef();
+    const [color, setColor] = useState("black");
+    const [lineWidth, setLineWidth] = useState(1);
+
+    const handleColorChange = (c)=> {
+        setColor(c);
+    }
+
+    const handleLineWidthChange = (lw) => {
+        setLineWidth(lw);
+    }
+    return (
+        <>
+            <h5 className="text-center">Tip: Ctrl + Scroll or Ctrl + Drag to zoom and pan.</h5>
+            <CanvasDraw
+                ref={canvasRef}
+                brushColor={color}
+                brushRadius={lineWidth}
+                hideGrid={true}
+                immediateLoading={true}
+                lazyRadius={0}
+                enablePanAndZoom={true}
+                id="canvas"
+                className="mx-auto"
+            />
+            <Tools
+                handleColorChange={handleColorChange}
+                handleLineWidthChange={handleLineWidthChange}
+                color={color}
+                lineWidth={lineWidth}
+                canvasRef={canvasRef.current}
+            />
+        </>
+    );
+    /*const canvasRef = useRef(null);
     const contextRef = useRef(null);
 
     const [drawing, setDrawing] = useState(false);
@@ -88,6 +124,6 @@ function Canvas(props) {
             onMouseLeave={stopDrawing}
             ref={canvasRef}
         />
-    );
+    );*/
 }
 export default Canvas;
