@@ -3,6 +3,51 @@ body {
     color: white;
 }
 
+.jumbotron {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(23, 65, 214) 0%, rgba(0,212,255,1) 50%, rgb(23, 65, 214) 100%);
+}
+
+.jumbotron > * {
+    color:black;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.video-responsive iframe {
+    left: 5%;
+    top: 0;
+    height: 100%;
+    width: 90%;
+    position: absolute;
+}
+
+.studio-btn {
+    text-decoration: none;
+    color: black;
+}
+
+.features-events {
+    margin-top: 15px;
+    background: linear-gradient(90deg, rgb(23, 65, 214) 0%, rgba(0,212,255,1) 50%, rgb(23, 65, 214) 100%);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.features-events > * {
+    color: black;
+}
+
 #titleContainer {
     text-align: center;
 }
@@ -21,4 +66,9 @@ canvas {
 
 .tool-btn {
     border: 1px solid black;
+}
+
+.about {
+    background: linear-gradient(90deg, rgb(128, 128, 128) 0%, rgb(255, 255, 255), rgb(128, 128, 128) 100%);
+
 }

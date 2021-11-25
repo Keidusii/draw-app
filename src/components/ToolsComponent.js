@@ -65,7 +65,7 @@ class Tools extends Component {
     download = () => {
         const link = document.createElement('a');
         link.download = `${this.props.title}.png`;
-        link.href = this.props.canvasRef.getDataURL("image/png", false, "white")
+        link.href = this.props.canvasRef.current.getDataURL("image/png", false, "white")
         link.click();
     }
 
@@ -91,14 +91,14 @@ class Tools extends Component {
                         <Button
                             color="danger"
                             className="col tool-btn"
-                            onClick={() => this.props.canvasRef.eraseAll()}
+                            onClick={() => this.props.canvasRef.current.eraseAll()}
                         >
                             Clear
                         </Button>
                         <Button
                             color="secondary"
                             className="col tool-btn"
-                            onClick={() => this.props.canvasRef.undo()}
+                            onClick={() => this.props.canvasRef.current.undo()}
                         >
                             <FontAwesomeIcon icon={faUndo} />
                         </Button>

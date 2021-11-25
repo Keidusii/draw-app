@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from './HeaderComponent';
 import Home from './HomeComponent';
 import Studio from './StudioComponent';
-import About from './AboutComponent';
 
 class Main extends Component {
     render() {
@@ -13,7 +12,6 @@ class Main extends Component {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/studio" element={<Studio />} />
-                    <Route path="/about" element={<About />} />
                 </Routes>
             </BrowserRouter>
         );

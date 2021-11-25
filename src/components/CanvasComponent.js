@@ -53,6 +53,8 @@ function Canvas() {
             </div>
             <CanvasDraw
                 ref={canvasRef}
+                canvasHeight={window.innerWidth > 430 ? 400 : 250}
+                canvasWidth={window.innerWidth > 430 ? 400 : 250}
                 brushColor={color}
                 brushRadius={lineWidth}
                 hideGrid={true}
@@ -68,7 +70,7 @@ function Canvas() {
                 color={color}
                 lineWidth={lineWidth}
                 title={title}
-                canvasRef={canvasRef.current}
+                canvasRef={canvasRef}
             />
         </>
     );

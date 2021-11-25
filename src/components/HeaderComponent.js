@@ -13,7 +13,7 @@ class Header extends Component {
                 light
             >
                 <NavbarBrand href="/">
-                    Draw
+                    SketchMaster
                 </NavbarBrand>
                 <Nav
                     className="mx-auto"
@@ -24,11 +24,6 @@ class Header extends Component {
                     </NavItem>
                     <NavItem>
                         <NavLink className="nav-link" to="/studio">Studio</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink className="nav-link" to="/about">
-                            About
-                        </NavLink>
                     </NavItem>
                 </Nav>
             </Navbar>
