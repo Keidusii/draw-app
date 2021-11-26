@@ -12,24 +12,9 @@ body {
     color:black;
 }
 
-iframe {
-    display: block;
-    margin: 0 auto;
-}
-
-.video-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
-}
-
-.video-responsive iframe {
-    left: 5%;
-    top: 0;
-    height: 100%;
-    width: 90%;
-    position: absolute;
+ul {
+    display: table;
+    margin: 20px auto;
 }
 
 .studio-btn {
