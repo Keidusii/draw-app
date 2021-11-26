@@ -19,7 +19,7 @@ class Header extends Component {
                 <div className="container row mx-auto features-events">
                     <div className="col features">
                         <h4 className="text-center">Features</h4>
-                        <ul>
+                        <ul className="features">
                             <li>Draw the way you want to using our free form lines.</li>
                             <li>Simple UI that is easy to understand.</li>
                             <li>Single slider that adjusts both the line and eraser width.</li>
